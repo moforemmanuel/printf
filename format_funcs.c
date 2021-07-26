@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include "printf.h"
+#include "holberton.h"
 
 /**
  * print_normal_char - prints a char that isn't from va_list

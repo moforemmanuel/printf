@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "printf.h"
+#include "holberton.h"
 
 /**
  * get_fmt_func - checks if @@fmt_identifier matches valid format

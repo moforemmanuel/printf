@@ -28,13 +28,9 @@ int _printf(const char *format, ...)
 				fmt_func = get_fmt_func(format[i]);
 
 				if (fmt_func)
-				{
 					result += fmt_func(&args);
-				}
 				else
-				{
 					result += print_normal_char(format[i]);
-				}
 			}
 			else
 			{

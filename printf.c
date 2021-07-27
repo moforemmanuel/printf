@@ -27,8 +27,6 @@ int _printf(const char *format, ...)
 				if (fmt_func)
 				{
 					result += fmt_func(&args);
-					i++;
-					continue;
 				}
 				else
 				{

@@ -15,6 +15,9 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
+	if (!format)
+		return (-1);
+
 	while (va_arg_loop_condition)
 	{
 		while (format && format[i] != '\0')

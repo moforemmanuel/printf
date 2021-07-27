@@ -9,10 +9,13 @@
  */
 int main(void)
 {
+	int len, len1;
 	_printf("Character:[%c]\n", '\0');
 	printf("Character:[%c]\n", '\0');
-printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	len = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	len1 = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+
+	printf("%d, %d\n", len, len1);
 
 	printf("\n");
 

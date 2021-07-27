@@ -2,13 +2,11 @@
 #include <stdarg.h>
 /**
  * print_int - prints decimal numbers
- *
  * @arg_list: arguments list
- *
  * Return: number of characters printed
  */
 
-int print_int(va_list arg_list)
+int print_int(va_list *arg_list)
 {
 	int d = va_arg(arg_list, int), mult = 1, dc, print_count = 0;
 

@@ -8,36 +8,23 @@
 
 int print_int(va_list *arg_list)
 {
-	int d = va_arg(*arg_list, int), mult = 1, dc, print_count = 0;
+unsigned int divisor = 1, i, resp, charPrinted = 0;
+int n = va_arg(*arg_list, int);
 
-	if (d < 0)
-	{
-		d = -d;
-		_putchar('-');
-		print_count++;
-	}
+if (n < 0)
+{
+	_putchar('-');
+	charPrinted++;
+	n *= -1;
+}
 
-	dc = d;
-	if (d < 10 && d >= 0)
-	{
-		_putchar(d + '0');
-		print_count++;
-	}
-	else
-	{
-		while (dc > 9)
-		{
-			mult *= 10;
-			dc /= 10;
-		}
-		while (mult > 0)
-		{
-			_putchar((d / mult) + '0');
-			print_count++;
-			d -= (d / mult) * mult;
-			mult /= 10;
-		}
-	}
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
+;
 
-	return (print_count);
+for (; divisor >= 1; n %= divisor, divisor /= 10, charPrinted++)
+{
+	resp = n / divisor;
+	_putchar('0' + resp);
+}
+return (charPrinted);
 }

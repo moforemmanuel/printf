@@ -18,25 +18,25 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-		while (format && format[i] != '\0')
+	while (format && format[i] != '\0')
+	{
+		if (format[i] == '%')
 		{
-			if (format[i] == '%')
-			{
-				i++;
-				fmt_func = get_fmt_func(format[i]);
-
-				if (fmt_func)
-					result += fmt_func(&args);
-				else if (format[i] != ' ')
-					result += print_percentage_and_char(format[i]);
-			}
-			else
-			{
-				result += print_normal_char(format[i]);
-			}
-
 			i++;
+			fmt_func = get_fmt_func(format[i]);
+
+			if (fmt_func)
+				result += fmt_func(&args);
+			else if (format[i] != ' ')
+				result += print_percentage_and_char(format[i]);
 		}
+		else
+		{
+			result += print_normal_char(format[i]);
+		}
+
+		i++;
+	}
 
 	va_end(args);
 

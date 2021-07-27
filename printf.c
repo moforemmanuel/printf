@@ -36,10 +36,14 @@ int _printf(const char *format, ...)
 			{
 				result += print_normal_char(format[i]);
 			}
+
 			i++;
 		}
+
 		va_arg_loop_condition = 0;
 	}
+
 	va_end(args);
+
 	return (result);
 }

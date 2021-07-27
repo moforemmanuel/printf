@@ -9,7 +9,8 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, result = 0, va_arg_loop_condition = 1, prev_is_percentage = 0;
+	unsigned int i = 0, result = 0, va_arg_loop_condition = 1,
+	prev_is_percentage = 0;
 	va_list args;
 	int (*fmt_func)(va_list *);
 
@@ -41,14 +42,10 @@ int _printf(const char *format, ...)
 				if (!prev_is_percentage)
 					result += print_normal_char(format[i]);
 			}
-
 			i++;
 		}
-
 		va_arg_loop_condition = 0;
 	}
-
 	va_end(args);
-
 	return (result);
 }

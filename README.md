@@ -6,3 +6,4 @@ At the end of this project, you are expected to be able to work as a memeber of 
 
 #### Background Context
 - Write your own "printf" function
+* Developed by **Adebayo Ajibade** and **Eshiet Eshiet**

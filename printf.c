@@ -9,8 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, result = 0, va_arg_loop_condition = 1,
-	prev_is_percentage = 0;
+	unsigned int i = 0, result = 0, va_arg_loop_condition = 1;
 	va_list args;
 	int (*fmt_func)(va_list *);
 
@@ -23,27 +22,19 @@ int _printf(const char *format, ...)
 	{
 		while (format && format[i] != '\0')
 		{
-			if (format[i] == '%' || prev_is_percentage)
+			if (format[i] == '%')
 			{
 				i++;
-				prev_is_percentage = 1;
 				fmt_func = get_fmt_func(format[i]);
 
 				if (fmt_func)
-				{
 					result += fmt_func(&args);
-					prev_is_percentage = 0;
-				}
 				else if (format[i] != ' ')
-				{
 					result += print_percentage_and_char(format[i]);
-					prev_is_percentage = 0;
-				}
 			}
 			else
 			{
-				if (!prev_is_percentage)
-					result += print_normal_char(format[i]);
+				result += print_normal_char(format[i]);
 			}
 			i++;
 		}

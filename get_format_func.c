@@ -19,6 +19,7 @@ int (*get_fmt_func(char fmt_identifier))(va_list *)
 		{'%', print_percentage},
 		{'i', print_int},
 		{'d', print_int},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 	int i = 0;

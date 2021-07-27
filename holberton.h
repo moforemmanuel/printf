@@ -1,7 +1,7 @@
 #ifndef PRINTF_FUNCTIONS_H_
 #define PRINTF_FUNCTIONS_H_
 #include <stdarg.h>
-
+#include <stdlib.h>
 /**
  * struct fmt_struct - format-type class/object/struct
  * @fmt_identifier: format identifier
@@ -18,7 +18,12 @@ typedef struct fmt_struct fmt_struct_data_type;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-
+int print_unsigned(va_list *arg);
+int print_oct(va_list *arg);
+int print_hex_base(va_list arg, char _case);
+int print_hex(va_list *arg);
+int print_HEX(va_list *arg);
+int print_unsignedIntToHex(unsigned int num, char _case);
 int (*get_fmt_func(char identifier))(va_list *);
 
 int print_char(va_list *arg);

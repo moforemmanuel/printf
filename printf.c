@@ -30,7 +30,9 @@ int _printf(const char *format, ...)
 				if (fmt_func)
 					result += fmt_func(&args);
 				else
-					result += print_normal_char(format[i]);
+					return (-1);
+
+				/* result += print_normal_char(format[i]); */
 			}
 			else
 			{

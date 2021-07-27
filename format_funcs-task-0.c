@@ -47,3 +47,16 @@ int print_string(va_list *arg)
 
 	return (i);
 }
+
+/**
+ * print_percentage - prints %
+ * @arg: pointer
+ * Return: 1,
+ */
+
+int print_percentage(va_list *arg)
+{
+	(void)arg;
+	_putchar("%");
+	return (1);
+}

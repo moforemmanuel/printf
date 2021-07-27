@@ -16,6 +16,7 @@ int (*get_fmt_func(char fmt_identifier))(va_list *)
 	fmt_struct_data_type fmt_struct_arr[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'%', print_percentage},
 		{'\0', NULL}
 	};
 	int i = 0;

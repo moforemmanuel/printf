@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, result = 0, va_arg_loop_condition = 1;
+	unsigned int i = 0, result = 0;
 	va_list args;
 	int (*fmt_func)(va_list *);
 
@@ -18,8 +18,6 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	while (va_arg_loop_condition)
-	{
 		while (format && format[i] != '\0')
 		{
 			if (format[i] == '%')
@@ -39,9 +37,6 @@ int _printf(const char *format, ...)
 
 			i++;
 		}
-
-		va_arg_loop_condition = 0;
-	}
 
 	va_end(args);
 

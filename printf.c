@@ -34,8 +34,11 @@ int _printf(const char *format, ...)
 					result += fmt_func(&args);
 					prev_is_percentage = 0;
 				}
-
-				/* result += print_normal_char(format[i]); */
+				else if (format[i] != ' ')
+				{
+					result += print_percentage_and_char(format[i]);
+					prev_is_percentage = 0;
+				}
 			}
 			else
 			{

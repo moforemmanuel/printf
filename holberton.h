@@ -22,6 +22,7 @@ int _printf(const char *format, ...);
 int (*get_fmt_func(char identifier))(va_list *);
 
 int print_char(va_list *arg);
+int print_percentage_and_char(char c);
 /* int print_int(va_list *arg); */
 /* int print_float(va_list *arg); */
 int print_string(va_list *arg);

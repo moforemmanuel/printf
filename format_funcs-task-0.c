@@ -2,6 +2,20 @@
 #include "holberton.h"
 
 /**
+ * print_percentage_and_char - print % and a char
+ * @c: char input
+ * Return: 2
+ */
+
+int print_percentage_and_char(char c)
+{
+	_putchar('%');
+	_putchar(c);
+
+	return (2);
+}
+
+/**
  * print_normal_char - prints a char that isn't from va_list
  * @c: char
  * Return: 1, which is the count of character printed

@@ -8,7 +8,7 @@
 
 int print_int(va_list *arg_list)
 {
-	int d = va_arg(arg_list, int), mult = 1, dc, print_count = 0;
+	int d = va_arg(*arg_list, int), mult = 1, dc, print_count = 0;
 
 	if (d < 0)
 	{

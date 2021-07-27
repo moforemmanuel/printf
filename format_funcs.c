@@ -59,13 +59,16 @@ int print_float(va_list *arg)
 
 int print_string(va_list *arg)
 {
-	char *str[1];
+	char *str;
 	int i;
 
-	str[0] = va_arg(*arg, char *);
+	str = va_arg(*arg, char *);
 
-	for (i = 0; str[0][i] != '\0'; i++)
-		_putchar(str[0][i]);
+	if (!str)
+		str = "(null)";
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
 
 	return (i);
 }

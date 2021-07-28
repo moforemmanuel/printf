@@ -24,6 +24,7 @@ int (*get_fmt_func(char fmt_identifier))(va_list *)
 		{'o', print_oct},
 		{'x', print_hex},
 		{'X', print_HEX},
+		{'S', print_S},
 		{'\0', NULL}
 	};
 	int i = 0;

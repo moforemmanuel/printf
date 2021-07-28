@@ -23,6 +23,7 @@ int print_oct(va_list *arg);
 int print_hex_base(va_list arg, char _case);
 int print_hex(va_list *arg);
 int print_HEX(va_list *arg);
+int print_S(va_list *list);
 int print_unsignedIntToHex(unsigned int num, char _case);
 int (*get_fmt_func(char identifier))(va_list *);
 

@@ -1,5 +1,5 @@
 .\" Manpage for _printf
-.TH man 8 "27 July 2021" "1.0" "_printf man page"
+.TH man 8 "31 July 2021" "1.0" "_printf man page"
 .SH NAME
 _printf - format and write a string, character or integer to stdout
 .SH SYNOPSIS
@@ -48,4 +48,4 @@ In the Example print the value of text with %s give the format of text.
 - prints integer number.
 
 .SH AUTHORS
-B. Adebayo Ajibade and Eshiet Eshiet
+B. Mofor Emmanuel 
